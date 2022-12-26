@@ -100,7 +100,7 @@ function Register(props) {
                 <button type='submit'>
                     Create User
                 </button>
-                <span>Already have an account ? <Link to="/Login">Login</Link> </span>
+                <span>Already have an account ? <Link to="/login">Login</Link> </span>
             </form>
         </FormContainer>
         </>

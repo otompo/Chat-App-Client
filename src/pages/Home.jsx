@@ -13,7 +13,9 @@ function Home(props) {
 
     return (
         <Container>
-            <h1>Home</h1>
+             <Link to="/login"> <h1>Home</h1></Link>
+             <Link to="/register"> <h1>Home</h1></Link>
+           
         </Container>
     );
 }

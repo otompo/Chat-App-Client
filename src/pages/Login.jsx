@@ -79,7 +79,7 @@ function Login(props) {
                 <button type='submit'>
                     Login
                 </button>
-                <span>Do not have an account ? <Link to="/Register">Register</Link> </span>
+                <span>Do not have an account ? <Link to="/register">Register</Link> </span>
             </form>
         </FormContainer>
         </>
