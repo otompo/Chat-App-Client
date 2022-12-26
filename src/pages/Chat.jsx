@@ -17,7 +17,7 @@ function Chat(props) {
     
     useEffect( () => {
         if (!localStorage.getItem(process.env.REACT_APP_LOCALHOST_KEY)) {
-          navigate("/chat");
+          navigate("/");
         } else {
           setCurrentUser(
              JSON.parse(
@@ -26,7 +26,7 @@ function Chat(props) {
           );
         }
       }, []);
-      
+
       useEffect(() => {
         if (currentUser) {
           socket.current = io(host);
