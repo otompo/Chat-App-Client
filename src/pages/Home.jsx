@@ -31,6 +31,12 @@ const Container = styled.div`
   h1{
     color:white
   }
+  a{
+    text-decoration:none;
+    &:hover {
+        text-decoration:underline;
+    }
+  }
   .container {
     height: 85vh;
     width: 85vw;

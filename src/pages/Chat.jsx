@@ -1,12 +1,12 @@
 import React, {useEffect, useState, useRef} from 'react';
-import styled from "styled-components"
-import axios from "axios"
 import { io } from "socket.io-client";
 import { useNavigate } from 'react-router-dom';
 import ChatContainer from "../components/ChatContainer";
+import { allUsersRoute, host } from '../utils/APIRoutes';
 import Contacts from "../components/Contacts";
 import Welcome from "../components/Welcome";
-import { allUsersRoute, host } from '../utils/APIRoutes';
+import styled from "styled-components"
+import axios from "axios"
 
 function Chat(props) {
     const navigate = useNavigate();
