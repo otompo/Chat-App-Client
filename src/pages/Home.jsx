@@ -13,8 +13,8 @@ function Home(props) {
 
     return (
         <Container>
-             <Link to="/login"> <h1>Home</h1></Link>
-             <Link to="/register"> <h1>Home</h1></Link>
+             <Link to="/login"> <h1>Login</h1></Link>
+             <Link to="/register"> <h1>Register</h1></Link>
            
         </Container>
     );
