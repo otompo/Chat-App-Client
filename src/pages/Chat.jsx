@@ -2,7 +2,7 @@ import React, {useEffect, useState, useRef} from 'react';
 import styled from "styled-components"
 import axios from "axios"
 import { io } from "socket.io-client";
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import ChatContainer from "../components/ChatContainer";
 import Contacts from "../components/Contacts";
 import Welcome from "../components/Welcome";
@@ -17,7 +17,7 @@ function Chat(props) {
     
     useEffect( () => {
         if (!localStorage.getItem(process.env.REACT_APP_LOCALHOST_KEY)) {
-          navigate("/login");
+          navigate("/chat");
         } else {
           setCurrentUser(
              JSON.parse(
@@ -26,6 +26,7 @@ function Chat(props) {
           );
         }
       }, []);
+      
       useEffect(() => {
         if (currentUser) {
           socket.current = io(host);
