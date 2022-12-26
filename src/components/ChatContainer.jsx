@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import ChatInput from "./ChatInput";
-import Logout from "./Logout";
+// import Logout from "./Logout";
 import toast from "react-hot-toast";
 import { v4 as uuidv4 } from "uuid";
 import axios from "axios";
@@ -81,17 +81,17 @@ export default function ChatContainer({ currentChat, socket }) {
     <Container>
       <div className="chat-header">
         <div className="user-details">
-          <div className="avatar">
+          <div className="avatar">            
             <img
               src={`data:image/svg+xml;base64,${currentChat.avatarImage}`}
               alt=""
             />
           </div>
           <div className="username">
-            <h3>{currentChat.username}</h3>
+          <h3>{currentChat.username}</h3>
           </div>
         </div>
-        <Logout />
+        {/* <Logout /> */}
       </div>
       <div className="chat-messages">
          {messages&&messages.map((message) => {
@@ -109,7 +109,9 @@ export default function ChatContainer({ currentChat, socket }) {
             </div>
           );
         })}
+        
       </div>
+      
       <ChatInput handleSendMsg={handleSendMsg} />
     </Container>
   );

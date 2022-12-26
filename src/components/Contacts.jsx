@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Logo from "../assets/logo.svg";
+import Logout from "./Logout";
 
 export default function Contacts({ contacts, changeChat }) {
   const [currentUserName, setCurrentUserName] = useState(undefined);
@@ -52,6 +53,7 @@ export default function Contacts({ contacts, changeChat }) {
             })}
           </div>
           <div className="current-user">
+              <Logout /> 
             <div className="avatar">
               <img
                 src={`data:image/svg+xml;base64,${currentUserImage}`}
